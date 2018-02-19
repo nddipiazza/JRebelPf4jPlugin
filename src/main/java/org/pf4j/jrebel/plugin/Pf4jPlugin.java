@@ -15,14 +15,13 @@ public class Pf4jPlugin implements Plugin {
     ClassLoader cl = getClass().getClassLoader();
 
     integration.addIntegrationProcessor(cl,
-        new String[] { "org.pf4j.demo.hello.HelloPlugin", "org.pf4j.demo.Boot" },
+        new String[] { "org.pf4j.demo.Boot" },
         new Pf4jClassCBP());
   }
 
   @Override
   public boolean checkDependencies(ClassLoader cl, ClassResourceSource crs) {
-    return cl.toString().contains("pf4j") || crs != null && (crs.getClassResource("org.pf4j.demo.Boot") != null ||
-        crs.getClassResource("org.pf4j.demo.hello.HelloPlugin") != null);
+    return cl.toString().contains("pf4j") || (crs != null && crs.getClassResource("org.pf4j.demo.Boot") != null);
   }
 
   @Override
