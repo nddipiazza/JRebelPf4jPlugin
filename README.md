@@ -2,7 +2,7 @@
  
  The following plugin will allow JRebel to be used with PF4J.
  
- The class reloading of PF4J plugins will be ignored as is. 
+ Without this plugin, JRebel will fail to reloading PF4J changes. 
  
  The plugin will do the following when a PF4J plugin is modified:
  
