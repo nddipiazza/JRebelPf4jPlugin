@@ -1,11 +1,9 @@
 package org.pf4j.jrebel.plugin;
 
-import org.zeroturnaround.javarebel.ClassEventListener;
 import org.zeroturnaround.javarebel.ClassResourceSource;
 import org.zeroturnaround.javarebel.Integration;
 import org.zeroturnaround.javarebel.IntegrationFactory;
 import org.zeroturnaround.javarebel.Plugin;
-import org.zeroturnaround.javarebel.ReloaderFactory;
 
 public class Pf4jPlugin implements Plugin {
 
