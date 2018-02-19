@@ -19,11 +19,10 @@ I assume you have your IDE with the JRebel IDE plugin installed.
  1) In order to show this working, we need to slightly modify the demo_gradle project to be a little more realistic. So `git clone -b JrebelTest git@github.com:nddipiazza/pf4j.git`
  1) `cd pf4j/demo_gradle`
  1) `./gradlew build -x test; mvn install:install-file -Dfile=/home/ndipiazza/lucidworks/pf4j/demo_gradle/app/build/libs/app-plugin-demo-uberjar.jar -DgroupId=org.pf4j -DartifactId=demo_gradle -Dversion=2.3.0 -Dpackaging=jar;`
- 1) git clone [this|https://github.com/nddipiazza/JRebelPf4jPlugin] repository
  1) Import your *pf4j/demo_gradle* into your IDE
  1) Go to JRebel view in IDE and enable JRebel for the project.
+ 1) git clone this (https://github.com/nddipiazza/JRebelPf4jPlugin) repository
  1) `cd JRebelPf4jPlugin`
  1) `mvn clean package`
- 1) Now run the example: `java -jar -Dpf4j.pluginsDir=build/plugins -agentpath:/home/ndipiazza/Downloads/jrebel/lib/libjrebel64.so -Drebel.plugins=/home/ndipiazza/lucidworks/jrebel-pf4j-plugin/target/jrebel-plugin-2.3.0.jar app/build/libs/app-plugin-demo-uberjar.jar`
- 
- 
+ 1) Now run the example: `java -jar -Dpf4j.pluginsDir=build/plugins -agentpath:/home/your/jrebel/lib/libjrebel64.so -Drebel.plugins=/home/your/JRebelPf4jPlugin/target/jrebel-plugin-2.3.0.jar /home/your/pf4j/demo_gradle/app/build/libs/app-plugin-demo-uberjar.jar`
+ 1) Make a java change in one of the plugins. Rebuild with your IDE. You should see the plugin automatically rebuild and apply the change.
