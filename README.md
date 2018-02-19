@@ -1,8 +1,8 @@
  # JRebel Plugin for PF4J
  
- The following plugin will allow JRebel to be used with PF4J.
+ The following plugin will allow hot-deploy of PF4J plugins using JRebel.
  
- Without this plugin, JRebel will fail to reloading PF4J changes. 
+ Without this plugin, JRebel will fail to reload PF4J changes. 
  
  The plugin will do the following when a PF4J plugin is modified:
  
